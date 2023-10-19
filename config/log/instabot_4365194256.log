@@ -1,0 +1,14 @@
+2023-10-20 00:33:04,885 - instabot version: 0.117.0 (bot) - INFO - Instabot version: 0.117.0 Started
+2023-10-20 00:33:04,885 - instabot version: 0.117.0 (bot) - DEBUG - Bot imported from /Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/site-packages/instabot/bot/bot.py
+2023-10-20 00:33:04,885 - instabot version: 0.117.0 (api_login) - INFO - Not yet logged in starting: PRE-LOGIN FLOW!
+2023-10-20 00:33:05,316 - instabot version: 0.117.0 (api) - DEBUG - POST to endpoint: accounts/get_prefill_candidates/ returned response: <Response [200]>
+2023-10-20 00:33:05,902 - instabot version: 0.117.0 (api) - DEBUG - POST to endpoint: qe/sync/ returned response: <Response [200]>
+2023-10-20 00:33:06,316 - instabot version: 0.117.0 (api) - DEBUG - POST to endpoint: launcher/sync/ returned response: <Response [200]>
+2023-10-20 00:33:06,772 - instabot version: 0.117.0 (api) - DEBUG - POST to endpoint: accounts/contact_point_prefill/ returned response: <Response [200]>
+2023-10-20 00:33:07,442 - instabot version: 0.117.0 (api) - DEBUG - POST to endpoint: accounts/login/ returned response: <Response [400]>
+2023-10-20 00:33:07,442 - instabot version: 0.117.0 (api) - DEBUG - Responsecode indicates error; response content: b'{"message":"The username you entered doesn\'t appear to belong to an account. Please check your username and try again.","status":"fail","error_title":"Incorrect username","buttons":[{"title":"Try Again","action":"dismiss"}],"invalid_credentials":true,"exception_name":"UserInvalidCredentials","error_type":"invalid_user"}'
+2023-10-20 00:33:07,442 - instabot version: 0.117.0 (api) - ERROR - Request returns 400 error!
+2023-10-20 00:33:07,442 - instabot version: 0.117.0 (api) - INFO - Instagram's error message: The username you entered doesn't appear to belong to an account. Please check your username and try again.
+2023-10-20 00:33:07,442 - instabot version: 0.117.0 (api) - INFO - Error type: invalid_user
+2023-10-20 00:33:07,442 - instabot version: 0.117.0 (api) - ERROR - Failed to login go to instagram and change your password
+2023-10-20 00:33:07,442 - instabot version: 0.117.0 (api) - INFO - Username or password is incorrect.
