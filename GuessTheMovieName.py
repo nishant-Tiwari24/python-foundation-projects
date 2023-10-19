@@ -1,5 +1,5 @@
 import random
-movies=['Drishyam','Nayakan','Avengers','Pink','Golmaal','Vikram Vedha','Black Friday','Dangal','Manichithratazu','Taare Zameen Par']
+movies=['drishyam','nayakan','avengers','pink','golmaal','vikram vedha','black friday','dangal','manichithratazu','taare zameen par']
 
 def createQues(movie):
     n = len(movie)
@@ -57,25 +57,25 @@ def play():
             
             notSaid = True
             while(notSaid):
-                letter = input("Your letter")
+                letter = str(input("Your letter: "))
                 if(isPresent(letter,pickedMovie)):
                     modifiedQues = unlock(modifiedQues,pickedMovie,letter)
                     print(modifiedQues)
-                    d = input('Press 1 to guess the movie name or 2 to nlock another letter')
+                    d = int(input('Press 1 to guess the movie name or 2 to nlock another letter'))
                     if d==1:
                         ans = input('Your answer: ')
-                        if ans==pickedMovie:
-                            pointsP1=pointsP1+1
+                        if ans == pickedMovie:
+                            pointsP1 = pointsP1+1
                             print('Correct')
-                            notSaid=False
-                            print(p1name,'Your score : ',pointsP1)
+                            notSaid = False
+                            print(p1name,'Your score : ', pointsP1)
                         else:
                             print('Try again')
                     
                 else:
                     print(letter," is not found")
 
-            c = input("Press 1 to continue or 0 to exit")
+            c = int(input("Press 1 to continue or 0 to exit"))
             if c==0:
                 print(p1name,'Your score is ',pointsP1)
                 print(p2name,'Your score is ',pointsP2)
