@@ -1,4 +1,4 @@
-import random
+import random as random
 movies=['drishyam','nayakan','avengers','pink','golmaal','vikram vedha','black friday','dangal','manichithratazu','taare zameen par']
 
 def createQues(movie):
@@ -10,39 +10,23 @@ def createQues(movie):
             temp.append(' ')
         else:
             temp.append('-')
-    separator = ', '   # You can change this to the desired separator
-    qn = separator.join(str(x) for x in temp) #converts back to string
+    separator = ''
+    qn = separator.join(temp) #converts back to string
     return qn
 
 def isPresent(letter,movie):
-    c = movie.count(letter)  #counts the number of times the letter is present in the movie
-    if c==0:
-        return True
-    else:
-        return False
+    return letter in movie
      
-def unlock(qn,movie,letter):
-    n = len(movie)
-    ref = list(movie)
-    refQn = list(qn)
-    temp = []
-    for i in range (n):
-        if ref[i]==' ' or ref[i]==letter:
-            temp.append(ref[i])
-        else:
-            if ref[i]=='*':
-                temp.append('*')
-            else:
-                temp.append(ref[i])
-    
-    separator = ','
-    qnNew = separator.join(str(x) for x in temp)
-    return qnNew
-    
+def unlock(question, movie, letter):
+    question = list(question)
+    for i in range(len(movie)):
+        if movie[i] == letter:
+            question[i] = letter
+    return ''.join(question)
 
 def play():
-    p1name = input('Enter your name: ')
-    p2name = input('Enter your name: ')
+    p1name = input('Player 1 enter your name: ')
+    p2name = input('Player 2 enter your name: ')
     pointsP1=0
     pointsP2=0
     turn=0
