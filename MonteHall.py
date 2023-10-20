@@ -1,7 +1,7 @@
 import random
 
-doors = []
-goatDoor = []
+doors = [0]*3
+goatDoor = [0]*2
 swapWins = 0 
 noSwapWins = 0
 
@@ -23,6 +23,8 @@ if(ch=='y'):
     if(doors[c]=='Goat'):
         print('Player wins')
         swapWins =  swapWins + 1
+    else:
+        print('Player lost')
 else:
     if(doors[c]=='Goat'):
         print('Player lost')
