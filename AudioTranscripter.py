@@ -8,7 +8,7 @@ with sr.AudioFile(audioFile) as source:
 try:
     print(r.recognize_google(audioFile))
 except sr.UnknownValueError:
-    print("Google couldn't recognize audio")
+    print("Google couldn't recognize audio") # except is a type of error
 except sr.RequestError:
     print("Check audio file once")
     
