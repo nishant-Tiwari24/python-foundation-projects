@@ -31,7 +31,3 @@ else:
     else:
         print('player wins')
         noSwapWins = noSwapWins + 1
-    
-
-
-    
