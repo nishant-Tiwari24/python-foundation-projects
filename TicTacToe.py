@@ -26,11 +26,14 @@ def checkColumns(symbol):
         return False
     
 def checkDiagonals(symbol):
+    count = 0
     for i in range(3):
-        count = 0
         for j in range(3):
-            board[i][i] == symbol
-            count = count+1
+            if i == j:
+                board[i][j] == symbol
+                count = count+1
+            else:
+                return False
         if count == 3:
             print(symbol,' won')
             return True
@@ -67,7 +70,7 @@ def play():
             if won():
                 break
             
-    if not win():
+    if not won():
         print('Its a draw')
         
 play()
