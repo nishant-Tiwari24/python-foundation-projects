@@ -14,7 +14,6 @@ def thank(player1,player2,pp1,pp2):
     print(player2," score is ",pp2)
     print('Thanks for playing')
 
-
 def play():
     player1 = input('Enter the name of first player: ')
     player2 = input('Enter the name of second player: ')
