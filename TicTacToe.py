@@ -43,7 +43,7 @@ def won(symbol):
     return checkRows(symbol) or checkColumns(symbol) or checkDiagonals(symbol)
 
 def place(symbol):
-    print(numpy.matrix[board])
+    print(board)
     while(1):
         row = int(input('Enter the row 1 or 2 or 3: '))
         column = int(input('Enter the column 1 or 2 or 3: '))
@@ -51,8 +51,7 @@ def place(symbol):
             break
         else:
             print('Invalid entry')
-    symbol = board[row-1][column-1]
-    return symbol
+    board[row-1][column-1] = symbol
 
 
 def play():
@@ -60,13 +59,13 @@ def play():
         if turn%2==0:
             print('X turn')
             place(p1s)
-            if won():
+            if won(p1s):
                 break
         
         else:
             print('O turn')
             place(p2s)
-            if won():
+            if won(p2s):
                 break
     
     if not (won(p1s)) and (won(p2s)):
