@@ -10,12 +10,35 @@ def checkRows(symbol):
             board[i][j] == symbol
             count = count+1
         if count==3:
-            print(symbol,'won')
+            print(symbol,' won')
             return True
+        return False
+        
+def checkColumns(symbol):
+    for i in range(3):
+        count = 0
+        for j in range(3):
+            board[j][i] == symbol
+            count = count+1
+        if count==3:
+            print(symbol,' won')
+            return True
+        return False
+    
+def checkDiagonals(symbol):
+    for i in range(3):
+        count = 0
+        for j in range(3):
+            board[i][i] == symbol
+            count = count+1
+        if count == 3:
+            print(symbol,' won')
+            return True
+        return False
+    
             
-
 def won(symbol):
-    return checkRows(symbol) or checkColumn(symbol) or checkDiagnols(symbol)
+    return checkRows(symbol) or checkColumns(symbol) or checkDiagonals(symbol)
 
 def place(symbol):
     print(numpy.matrix[board])
