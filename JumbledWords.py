@@ -9,7 +9,7 @@ def jumble(word):
    jumbled = ''.join(random.sample(word,len(word)))
    return jumbled
 
-def thanks(player1,player2,pp1,pp2):
+def thank(player1,player2,pp1,pp2):
     print(player1," score is ",pp1)
     print(player2," score is ",pp2)
     print('Thanks for playing')
@@ -26,7 +26,7 @@ def play():
     print(qn)
     
     while 1:
-        if turn%2==0:
+        if turn%2 == 0:
             print(player1," your chance")
             ans = input('What is in your mind?')
             if ans == pickedWord:
