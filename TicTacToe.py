@@ -9,10 +9,10 @@ def checkRows(symbol):
         for j in range(3):
             board[i][j] == symbol
             count = count+1
-        if count==3:
+        if count == 3:
             print(symbol,' won')
             return True
-        return False
+    return False
         
 def checkColumns(symbol):
     for i in range(3):
@@ -20,10 +20,10 @@ def checkColumns(symbol):
         for j in range(3):
             board[j][i] == symbol
             count = count+1
-        if count==3:
+        if count == 3:
             print(symbol,' won')
             return True
-        return False
+    return False
     
 def checkDiagonals(symbol):
     count = 0
@@ -37,7 +37,7 @@ def checkDiagonals(symbol):
         if count == 3:
             print(symbol,' won')
             return True
-        return False
+    return False
     
 def won(symbol):
     return checkRows(symbol) or checkColumns(symbol) or checkDiagonals(symbol)
