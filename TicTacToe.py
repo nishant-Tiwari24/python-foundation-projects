@@ -3,7 +3,7 @@ board = numpy.array([['-','-','-'],['-','-','-'],['-','-','-']])
 p1s='X'
 p2s='O'
 
-def checkRows(symbol):
+def checkRows(symbol):  
     for i in range(3):
         count = 0
         for j in range(3):
@@ -39,7 +39,6 @@ def checkDiagonals(symbol):
             return True
         return False
     
-            
 def won(symbol):
     return checkRows(symbol) or checkColumns(symbol) or checkDiagonals(symbol)
 
@@ -54,10 +53,10 @@ def place(symbol):
             print('Invalid entry')
     symbol = board[row-1][column-1]
     return symbol
-    
+
 
 def play():
-    for turn in range(0,9):
+    for turn in range(9):
         if turn%2==0:
             print('X turn')
             place(p1s)
@@ -69,8 +68,8 @@ def play():
             place(p2s)
             if won():
                 break
-            
-    if not won():
+    
+    if not (won(p1s)) and (won(p2s)):
         print('Its a draw')
         
 play()
