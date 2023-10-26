@@ -32,7 +32,7 @@ def play():
     turn=0
     willing=True
     
-    while(willing==True):
+    while(willing is True):
         if turn%2==0:
             print(p1name," Your Turn")
             pickedMovie = random.choice(movies)
